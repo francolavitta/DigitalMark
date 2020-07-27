@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <%- include('../partials/headContent')%>
+  <link rel="stylesheet" href="/css/productDetails.css">
+
+
+  <title>DM - <%= selectedNotebook.nombre%></title>
+
+
+</head>
+
+<body>
+
+  <%- include('../partials/navBar')%>
+
+  <!-- Modal -->
+  <!-- <div class="modal-header">
+     <h5 class="modal-title" id="exampleModalLongTitle">Detalle de producto</h5> 
+     <a href="#" style="float: right; text-decoration: none;">Usuario: Juan Perez</a> 
+  </div> -->
+
+  <main class="container-fluid">
+
+  <section class="row">
+    <section class="col-12 col-md-12 col-lg-12">
+
+      <div class="card">
+        <div class="card-header">
+          <nav class="header-navigation">
+
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="hyperlink" href="/" style="text-decoration: none;">Inicio</a></li>
+              <li class="breadcrumb-item"><a class="hyperlink" href="/categorias/<%= selectedNotebook.marca%>"
+                  style="text-decoration: none;"><%= selectedNotebook.marca%></a></li>
+              <li class="breadcrumb-item active" aria-current="page"><%= selectedNotebook.nombre%></li>
+            </ol>
+
+            <div class="btn-group">
+              <a href="" class="btn btn-link btn-share;" style="text-decoration: none;">Compartir</a>
+              <a href="" class="btn btn-link btn-share;" style="text-decoration: none;">Favoritos</a>
+            </div>
+          </nav>
+        </div>
+
+        <div class="card-body store-body row">
+
+          <ul class="thumbnails-list">
+            <li class="thumbnails-item"><img class="img-fluid" src="/img/<%= selectedNotebook.imagen%>" alt=""></li>
+            <li class="thumbnails-item"><img class="img-fluid" src="/img/<%= selectedNotebook.imagen%>" alt=""></li>
+            <li class="thumbnails-item"><img class="img-fluid" src="/img/<%= selectedNotebook.imagen%>" alt=""></li>
+          </ul>
+
+          <div class="product-gallery-featured col-md-5 col-12 text-center px-0">
+            <img class="img-fluid" src="/img/<%= selectedNotebook.imagen%>" alt="">
+          </div>
+
+          <div class="product-payment col-md-5 col-12">
+            <h4 class="product-title"><%= selectedNotebook.nombre%></h4>
+            <h2 class="product-price display-4"><%= selectedNotebook.precio%></h2>
+            <p class="text-success"><i class="fa fa-credit-card"></i>Pagá con todos los medios</p>
+            <p class="mb-0"><i class="fa fa-truck"></i>Retiro ¡GRATIS! <a href="#" style="text-decoration: none;">Ver
+                sucursales</a></p>
+            <p class="mb-0"><i class="fa fa-truck"></i>Envío rápido a todo el país <li style="list-style-type: none;"><a
+                  href="#" style="text-decoration: none;">Calcular costo de
+                  envío</a></li>
+            </p>
+            <label for="quant">Cantidad</label>
+            <input type="number" name="quantity" min="1" id="quant" class="form-control mb-5 input-lg"
+              placeholder="Elegí cantidad">
+            <button class="btn btn-primary btn-lg btn-block">Comprar</button>
+          </div>
+
+          <div class="product-description col-md-4 col-12">
+            <h2 style="margin-bottom: 40px;">Especificaciones</h2>
+            <dl class="row mb-4">
+              <dt class="col-sm-5">Marca</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.marca%></dd>
+              <dt class="col-sm-5">Modelo</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.modelo%></dd>
+              <dt class="col-sm-5">Procesador</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.procesador%></dd>
+              <dt class="col-sm-5">Memoria Ram</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.memoriaRam%></dd>
+            </dl>
+          </div>
+
+          <div class="product-description col-md-4 col-12">
+            <h2 style="margin-bottom: 40px;"><br></h2>
+            <dl class="row mb-4">
+              <dt class="col-sm-5">Disco Rígido</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.discoRigido%></dd>
+              <dt class="col-sm-5">Pantalla</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.pantalla%></dd>
+              <dt class="col-sm-5">Sistema Operativo</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.sistemaOperativo%></dd>
+              <dt class="col-sm-5">Memoria Integrada</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.memoriaIntegrada%></dd>
+            </dl>
+          </div>
+
+          <div class="product-description col-md-4 col-12">
+            <h2 style="margin-bottom: 40px;"><br></h2>
+            <dl class="row mb-4">
+              <dt class="col-sm-5">Wi-Fi</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.memoriaIntegrada%></dd>
+              <dt class="col-sm-5">Salida HDMI</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.salidaHdmi%></dd>
+              <dt class="col-sm-5">Puerto de Red</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.puertoRed%></dd>
+              <dt class="col-sm-5">Salida VGA</dt>
+              <dd class="col-sm-7"><%= selectedNotebook.salidaVga%></dd>
+            </dl>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </section>
+
+</main>
+<%- include('../partials/footer')%>
+
+</body>
+
+  <%- include('../partials/boostrapScripts')%>
+
+​
+
+</html>

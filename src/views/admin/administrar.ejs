@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Icono pagina -->
+  <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+
+  <style>
+    .modal-content {
+      background-color: #24303c;
+      color: white;
+      border-radius: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      vertical-align: middle;
+    }
+
+    .tacho {
+
+      color: #d11a2a;
+      font-size: 30px;
+    }
+
+    .ver {
+      font-size: 20px;
+      padding: 5px;
+      border: 2px solid white;
+      border-radius: 50%;
+
+    }
+
+    .editar {
+      font-size: 20px;
+      border: 2px solid white;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .actualizar {
+      color: white;
+      padding: 0% 5px;
+    }
+  </style>
+
+  <title>Administrar productos</title>
+
+</head>
+
+<body style="background-color: rgb(36, 35, 35); color:white">
+  <main class="container-fluid" style="background-color: rgb(36, 35, 35); color:white">
+
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Crear Producto</h5>
+      <a href="#" style="float: right; text-decoration: none;">Usuario: Juan Perez
+    </div>
+
+    <article>
+      <a href='/administrar/create'><button type="button" class="btn btn-primary"
+          style="margin-top: 10px;">Agregar</button></a>
+      <a href='/'><button type="button" class="btn btn-primary"
+          style="float: right; margin-top: 10px; margin-right: 10px; margin-bottom: 10px;">Volver</button></a>
+    </article>
+
+    <!--Administrador de productos-->
+    <section class="row">
+      <article class="col-12">
+        <h2 class="display-12"></h2>
+      </article>
+
+      <table class="table col-12" style="background-color: rgb(36, 35, 35); color:white;">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Destacado</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+            <th scope="col">Actualizar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% notebooks.forEach(notebook => { %>
+          <tr>
+            <form action="/administrar/edit/<%=notebook.id%>?_method=PUT
+                " method="POST" enctype="multipart/form-data">
+
+              <td><%=notebook.id%></td>
+              <td contenteditable='true'>
+                <input type="text" class="form-control clase1" id="exampleFormControlTextarea1" name="nombre"
+                  placeholder="" value="<%=notebook.nombre%>">
+              </td>
+              <td contenteditable='true'>
+                <input type="text" class="form-control clase1" id="exampleFormControlTextarea1" name="modelo"
+                  placeholder="" value="<%=notebook.modelo%>">
+              </td>
+              <td contenteditable='true'>
+                <input type="text" class="form-control clase1" id="exampleFormControlTextarea1" name="marca"
+                  placeholder="" value="<%=notebook.marca%>">
+              </td>
+              <td contenteditable='true'>
+                <input type="text" class="form-control clase1" id="exampleFormControlTextarea1" name="precio"
+                  placeholder="" value="<%=notebook.precio%>">
+              </td>
+              <td contenteditable='true'>
+                <input type="text" class="form-control clase1" id="exampleFormControlTextarea1" name="stock"
+                  placeholder="" value="<%=notebook.stock%>">
+              </td>
+
+              <td>
+                <div style="text-align: center;" class="form-check">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck1" name="destacado">
+                </div>
+              </td>
+
+              <td><a href="/detalles/<%= notebook.id%>">
+                  <ion-icon class="ver" name="eye-outline"></ion-icon>
+                </a></td>
+              <td><a href="/administrar/edit/<%= notebook.id%>">
+                  <ion-icon class="editar" name="pencil-outline"></ion-icon>
+                </a></td>
+              <td><a href="/administrar/delete/<%= notebook.id%>">
+                  <ion-icon class="tacho" name="trash-outline"></ion-icon>
+                </a></td>
+              <td style="text-align: center;"><button class="btn btn-success actualizar" type="submit">
+                  <ion-icon size="large" name="checkmark-outline"></ion-icon>
+                </button></td>
+            </form>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<div class="site-wrapper">
+  <div class="pt-table desktop-768">
+    <div class="page-home relative">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+            <div class="hexagon-menu clear">
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <% let marca;%>
+                <% let marca1;%>
+                <% let marca2;%>
+                <% let marca3;%>
+                <% let marca4;%>
+                <% let marca5;%>
+                <% let marca6;%>
+
+                <% for(let i= 0; i < marcas.length; i++){ %>
+                <% marca = marcas[0]%>
+                <% if (i == 1) { marca1 = marcas[i]}%>
+                <% if (i == 2) { marca2 = marcas[i]}%>
+                <% if (i == 3) { marca3 = marcas[i]}%>
+                <% if (i == 4) { marca4 = marcas[i]}%>
+                <% if (i == 5) { marca5 = marcas[i]}%>
+                <% if (i == 6) { marca6 = marcas[i]}%>
+
+
+                <% }%>
+
+                <a href="/categorias/<%= marca.nombre%>" target="_blank" class="hex-content"
+                  style="vertical-align: middle;">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 120px;" src="/img/logos/<%= marca.logo%>"></ion-icon>
+                        <!-- <ion-icon name="desktop-outline"></ion-icon> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca1.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 130px;" src="/img/logos/<%= marca1.logo%>"></ion-icon>
+
+                        <!-- <ion-icon name="hardware-chip-outline"></ion-icon> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca1.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca2.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <!-- <ion-icon name="grid-outline"></ion-icon> -->
+                        <ion-icon style="font-size: 80px;" src="/img/logos/<%= marca2.logo%>"></ion-icon>
+
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca2.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca3.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 130px" src="/img/logos/<%= marca3.logo%>"></ion-icon>
+
+                        <!-- <ion-icon name="tv-outline"></ion-icon> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca3.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca4.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 130px;" src="/img/logos/<%= marca4.logo%>"></ion-icon>
+
+                        <!-- <ion-icon name="wifi-outline"></ion-icon> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca4.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca5.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 80px;" src="/img/logos/<%= marca5.logo%>"></ion-icon>
+
+                        <!-- <ion-icon name="headset-outline"></ion-icon> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca5.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hexagon-item">
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="hex-item">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <a href="/categorias/<%= marca6.nombre%>" target="_blank" class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa">
+                        <ion-icon style="font-size: 130px;" src="/img/logos/<%= marca6.logo%>"></ion-icon>
+
+                        <!-- <ion-icon name="save-outline"></ion-icon> <%= marca6.logo%> -->
+                      </i>
+                    </span>
+                    <!-- <span class="title"><%= marca6.nombre%></span> -->
+                  </span>
+                  <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                      fill="#1e2530"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

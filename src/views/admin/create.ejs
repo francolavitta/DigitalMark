@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Icono pagina -->
+    <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+
+    <style>
+        .modal-content {
+            background-color: #24303c;
+            color: white;
+            border-radius: 0px;
+        }
+    </style>
+    <title>Creacion producto</title>
+
+</head>
+
+<body style="background-color: rgb(36, 35, 35);">
+    ​
+    <div class="modal-content" style="background-color: rgb(36, 35, 35);">
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Crear Producto</h5>
+            <a href="#" style="float: right; text-decoration: none;">Usuario: Juan Perez
+        </div>
+
+        <form action="/administrar/create" method="POST" enctype="multipart/form-data">
+
+            <div>
+                <button type="submit" class="btn btn-primary"
+                    style="float: right; margin-top: 10px; margin-right: 10px; margin-bottom: 10px;">Guardar</button>
+                <a href='/administrar'><button type="button" class="btn btn-primary"
+                        style="float: right; margin-top: 10px; margin-right: 10px; margin-bottom: 10px;">Volver</button></a>
+            </div>
+
+            <div class="row col-12 col-md-12 col-lg-12" style="margin:0px">
+
+                <!--Desarrollo formulario-->
+
+                <div class="form-group col-4" style="background-color: rgb(36, 35, 35);">
+
+                    <h5 style="color: white; margin-top: 10px;">Descripción</h5>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Nombre del producto</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá nombre del producto" name="nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Descripción corta</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá descripción" name="descripcionCorta">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Descripción larga</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá descripción" name="descripcionLarga">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Stock</label>
+                        <input type="number" class="form-control" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá número" name="stock">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency-field">Precio</label>
+                        <input type="text" class="form-control" name="currency-field" id="currency-field"
+                            data-type="currency" placeholder="$1,000,000.00" name="precio">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency-field">Precio anterior</label>
+                        <input type="text" class="form-control" name="currency-field" id="currency-field"
+                            data-type="currency" placeholder="$1,000,000.00" name="oldPrice">
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2" style="margin-top: 6px;">Cuotas</label>
+                            <input type="number" class="form-control" id="exampleFormControlTextarea1"
+                                placeholder="Ingresá número" name="cuotas">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Envío</label>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                    name="domicilio">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    A domicilio
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                    name="sucursal">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Retira por sucursal
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Desarrollo ficha técnica-->
+
+                <div class="form-group col-4" style="background-color: rgb(36, 35, 35)">
+                    <h5 style="color: white; margin-top: 10px;">Especificaciones</h5>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Marca</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá marca" name="marca">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Modelo</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Ingresá modelo" name="modelo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Procesador</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="procesador">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Memoria Ram</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="memoriaRam">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Disco Rígido</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="discoRigido">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Pantalla</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="pantalla">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Sistema Operativo</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="sistemaOperativo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Memoria Integrada</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="memoriaIntegrada">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Salida HDMI</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="salidaHdmi">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Puerto de red</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="puertoRed">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Salida VGA</label>
+                        <input type="text" class="form-control clase1" id="exampleFormControlTextarea1"
+                            placeholder="Completar campo" name="salidaVga">
+                    </div>
+
+                </div>
+
+                <!--Desarrollo fotos-->
+
+                <div class="form-group col-4" style="background-color: rgb(36, 35, 35);">
+                    <h5 style="color: white; margin-top: 10px;">Fotos</h5>
+
+                    <label for="exampleFormControlTextarea1">Carga fotos del producto</label>
+
+
+                    <form method="post" enctype="multipart/form-data">
+
+                        <!--Aquí solicito la imagen-->
+                        <div class="custom-file">
+                            <input type="file" name="imagen">
+                            <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
+
+    <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+​
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="js/bootstrap.min.js"></script>

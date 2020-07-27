@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Rompe si se saca de esta seccion -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+    <%- include('../partials/headHome')%>
+
+</head>
+
+<body>
+
+    <main class="container-fluid">
+        <div class="bg" id="top"></div>
+
+        <%- include('../partials/navBar')%>
+
+        <form action="/administrar/create" method="POST" enctype="multipart/form-data">
+
+            <div class="row col-12 col-md-12 col-lg-12" style="margin:0px">
+
+                <!-- se muestran errores -->
+                <% if(typeof(errors) != 'undefined'){%>
+                <ul class="alert alert-danger">
+                    <% errors.forEach(error => { %>
+                    <li><%= error.msg%></li>
+                    <%});%>
+                </ul>
+                <%}%>    
+
+                <div class="form-group col-12" style="text-align:center">
+
+                    <div>
+                        <h5 class="modal-title p-login" id="exampleModalLabel" style="text-align:center">Ingresá a tu
+                            cuenta</h5>
+                            <p><h6 class="modal-title p-login" id="exampleModalLabel" style="text-align:center">¿No tenés cuenta?  <a href='/register' style="color: orange;">Registrate</a></h6></p>
+                    </div>
+
+                    <!--login-->
+
+                    <div><label class="datos">Email</label></div>
+
+                    <div><input class="controls" type="email" name="email" id="Email" placeholder="Ingresá tu email">
+                    </div>
+
+                    <div><label class="datos">Contraseña</label></div>
+
+                    <div><input class="controls" type="password" name="contraseña" id="contraseña"
+                            placeholder="***********">
+                    </div>
+
+                    <div><label class="terminos"><a class="a-login" href="#" style="color: orange;">Olvidé mi
+                                contraseña</a></label></div>
+
+                    <div><input class="botons" type="submit" value="Ingresar" style="background-color: orange;"></div>
+
+
+                    <h4>¿Qué vas a poder hacer en tu cuenta? </h4>
+
+                    <p class="p-login">Consultar el estado de tus compras</p>
+                    <p class="p-login">Descargar las facturas.</p>
+                    <p class="p-login">Consultar manuales de los productos comprados.</p>
+                    <p class="p-login">Acceder al historial de productos vistos.</p>
+                    <p class="a-login"><a data-toggle="modal" data-target="#staticBackdrop" href="" style="color: orange;"> Ver
+                            políticas de
+                            privacidad</a></p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+    <%- include('../partials/footer')%>
+                <%- include('../partials/boostrapScripts')%>
+
+</body>
+
+</html>
